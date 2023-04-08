@@ -16,7 +16,7 @@ b_cancer_model = tf.keras.models.load_model('Bcancer_model.hdf5', 'r')
 with st.sidebar:
     selected = option_menu('Multiple Disease Prediction System',
 
-                           ['Diabetes Prediction',
+                           [#'Diabetes Prediction',
                             'Heart Disease Prediction',
                             "Parkinson's Prediction",
                             'Breast Cancer Prediction'],
