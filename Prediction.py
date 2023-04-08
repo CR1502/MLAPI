@@ -4,26 +4,26 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-# diabetes_model = tf.keras.models.load_model('diab_model.hdf5', 'r')
+diabetes_model = tf.keras.models.load_model('diab_model.hdf5', 'rb')
 
-heart_disease_model = tf.keras.models.load_model('heart_model.hdf5', 'r')
+heart_disease_model = tf.keras.models.load_model('heart_model.hdf5', 'rb')
 
-parkinson_model = tf.keras.models.load_model('park_model.hdf5', 'r')
+parkinson_model = tf.keras.models.load_model('park_model.hdf5', 'rb')
 
-b_cancer_model = tf.keras.models.load_model('Bcancer_model.hdf5', 'r')
+b_cancer_model = tf.keras.models.load_model('Bcancer_model.hdf5', 'rb')
 
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Multiple Disease Prediction System',
 
-                           [#'Diabetes Prediction',
+                           ['Diabetes Prediction',
                             'Heart Disease Prediction',
                             "Parkinson's Prediction",
                             'Breast Cancer Prediction'],
                            default_index=0)
 
 # Diabetes Prediction Page
-"""if selected == 'Diabetes Prediction':
+if selected == 'Diabetes Prediction':
 
     # page title
     st.title('Diabetes Prediction using ML')
@@ -69,7 +69,7 @@ with st.sidebar:
         else:
             diab_diagnosis = 'The person is not diabetic'
 
-    st.success(diab_diagnosis)"""
+    st.success(diab_diagnosis)
 
 # Heart Disease Prediction Page
 if selected == 'Heart Disease Prediction':
