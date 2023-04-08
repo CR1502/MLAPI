@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-diabetes_model = tf.keras.models.load_model('diab_model.hdf5', 'r')
+# diabetes_model = tf.keras.models.load_model('diab_model.hdf5', 'r')
 
 heart_disease_model = tf.keras.models.load_model('heart_model.hdf5', 'r')
 
@@ -23,7 +23,7 @@ with st.sidebar:
                            default_index=0)
 
 # Diabetes Prediction Page
-if selected == 'Diabetes Prediction':
+"""if selected == 'Diabetes Prediction':
 
     # page title
     st.title('Diabetes Prediction using ML')
@@ -69,7 +69,7 @@ if selected == 'Diabetes Prediction':
         else:
             diab_diagnosis = 'The person is not diabetic'
 
-    st.success(diab_diagnosis)
+    st.success(diab_diagnosis)"""
 
 # Heart Disease Prediction Page
 if selected == 'Heart Disease Prediction':
